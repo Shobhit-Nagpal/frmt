@@ -62,26 +62,31 @@ func main() {
 
     flag.Parse()
 
+    if len(os.Args) < 3 {
+        printError("Usage: frmt -file=<FILE_PATH> -format=<DESIRED_FORMAT>\n")
+        os.Exit(1)
+    }
+
     *desiredFormat = strings.ToLower(*desiredFormat)
 
     path, err := filepath.Abs(*file)
     if err != nil {
         errMsg := fmt.Sprintf("PATH ERROR: %s", err)
         printError(errMsg)
-        os.Exit(1)
+        os.Exit(2)
     }
 
     validFile := fileExists(path)
 
     if !validFile {
-        os.Exit(2)
+        os.Exit(3)
     }
 
     sameFormat := isSameFormat(filepath.Ext(path), *desiredFormat)
 
     if sameFormat {
         printError("FORMAT ERROR: Original file is already present in desired format\n")
-        os.Exit(3)
+        os.Exit(4)
     }
 
     desiredFile := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path)) + "." + *desiredFormat
@@ -93,7 +98,7 @@ func main() {
     if err != nil {
         errMsg := fmt.Sprintf("Failed to open file: %s", err)
         printError(errMsg)
-        os.Exit(4)
+        os.Exit(5)
     }
 
     fileErr := false
@@ -104,7 +109,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "jpg":
@@ -112,7 +117,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "jpeg":
@@ -120,7 +125,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "tiff":
@@ -128,7 +133,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "tif":
@@ -136,7 +141,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "bmp":
@@ -144,7 +149,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     case "pdf":
@@ -152,7 +157,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("Failed to write file: %s\n", err)
             printError(errMsg)
-            os.Exit(5)
+            os.Exit(6)
         }
         break
     default:
@@ -168,7 +173,7 @@ func main() {
         if err != nil {
             errMsg := fmt.Sprintf("PWD ERROR: %s\n", err)
             printError(errMsg)
-            os.Exit(6)
+            os.Exit(7)
         }
         fmt.Printf("File converted! Destination: %s\n", pwd)
     }
