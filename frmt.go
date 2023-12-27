@@ -156,7 +156,9 @@ func main() {
         }
         break
     default:
-        printError("Format not supported :(\n")
+        os.Remove(outputFile.Name())
+        errMsg := fmt.Sprintf("%s format is not supported :(\n", *desiredFormat)
+        printError(errMsg)
         fileErr = true
         break
     }
