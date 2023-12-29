@@ -21,7 +21,7 @@ brews:
   -
     name: frmt
     homepage: "https://github.com/Shobhit-Nagpal/frmt"
-    tap:
+    repository:
       owner: Shobhit-Nagpal
       name: homebrew-frmt
     commit_author:
