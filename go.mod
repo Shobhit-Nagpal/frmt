@@ -1,6 +1,6 @@
 module github.com/Shobhit-Nagpal/frmt
 
-go 1.21.5
+go 1.23
 
 require (
 	github.com/disintegration/imaging v1.6.2 // indirect
