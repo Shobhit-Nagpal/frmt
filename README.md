@@ -15,6 +15,13 @@ frmt -file=<FILE_PATH> -format=<DESIRED_FORMAT>
 - File paths can be relative and/or absolute
 - Format flag is case insensitive
 
+# Supported formats
+- PNG
+- JPG / JPEG
+- BMP
+- PDF
+- TIF / TIFF
+
 # Working
 The way frmt works is pretty simple.
 
