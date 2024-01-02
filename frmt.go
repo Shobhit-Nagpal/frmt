@@ -57,8 +57,8 @@ func isSameFormat(originalFormat string, desiredFormat string) bool {
 }
 
 func main() {
-    file := flag.String("file", "", "Original file to convert") 
-    desiredFormat := flag.String("format", "jpeg", "Desired format to convert original file to")
+    path := flag.String("p", "", "Path of original file to convert") 
+    desiredFormat := flag.String("f", "jpeg", "Desired format to convert original file to")
 
     flag.Parse()
 
@@ -69,32 +69,32 @@ func main() {
 
     *desiredFormat = strings.ToLower(*desiredFormat)
 
-    path, err := filepath.Abs(*file)
+    absPath, err := filepath.Abs(*path)
     if err != nil {
         errMsg := fmt.Sprintf("PATH ERROR: %s", err)
         printError(errMsg)
         os.Exit(2)
     }
 
-    validFile := fileExists(path)
+    validFile := fileExists(absPath)
 
     if !validFile {
         os.Exit(3)
     }
 
-    sameFormat := isSameFormat(filepath.Ext(path), *desiredFormat)
+    sameFormat := isSameFormat(filepath.Ext(absPath), *desiredFormat)
 
     if sameFormat {
         printError("FORMAT ERROR: Original file is already present in desired format\n")
         os.Exit(4)
     }
 
-    desiredFile := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path)) + "." + *desiredFormat
+    desiredFile := strings.TrimSuffix(filepath.Base(absPath), filepath.Ext(absPath)) + "." + *desiredFormat
 
     outputFile, err := os.Create(desiredFile) 
     defer outputFile.Close()
 
-    src, err := imgconv.Open(path)
+    src, err := imgconv.Open(absPath)
     if err != nil {
         errMsg := fmt.Sprintf("Failed to open file: %s", err)
         printError(errMsg)
