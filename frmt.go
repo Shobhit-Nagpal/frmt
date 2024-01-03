@@ -63,7 +63,7 @@ func main() {
     flag.Parse()
 
     if len(os.Args) < 3 {
-        printError("Usage: frmt -file=<FILE_PATH> -format=<DESIRED_FORMAT>\n")
+        printError("Usage: frmt -p <FILE_PATH> -f <DESIRED_FORMAT>\n")
         os.Exit(1)
     }
 
