@@ -6,7 +6,7 @@ Go was the first choice due to the ease of making CLI tools with the language.
 
 Pronounced as format.
 
-![Frmt working ss](https://github.com/Shobhit-Nagpal/portfolio/tree/main/src/assets/frmt.png)
+![Frmt working ss](https://shobhit-nagpal.github.io/portfolio/static/media/frmt.50e7fa27d4d7d26a8216.png)
 
 # Installation
 ## Clone repo
