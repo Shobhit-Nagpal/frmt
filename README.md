@@ -4,6 +4,8 @@ frmt is a CLI format convertor for those who live in the terminal.
 It was built for my own convenience and thought it'd be cool to turn this into a tool that anyone can use.
 Go was the first choice due to the ease of making CLI tools with the language.
 
+Pronounced as format.
+
 # Installation
 ## Clone repo
 ```shell
