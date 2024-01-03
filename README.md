@@ -4,6 +4,22 @@ frmt is a CLI format convertor for those who live in the terminal.
 It was built for my own convenience and thought it'd be cool to turn this into a tool that anyone can use.
 Go was the first choice due to the ease of making CLI tools with the language.
 
+# Installation
+## Clone repo
+```shell
+git clone git@github.com:Shobhit-Nagpal/frmt.git
+```
+
+## Move binary to /bin directory
+```shell
+sudo mv frmt /bin/
+```
+
+To remove the binary from your bin directory:
+```shell
+sudo rm /bin/frmt
+```
+
 # Usage
 To convert your file into another format, execute the following command:
 
