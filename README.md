@@ -51,3 +51,6 @@ The way frmt works is pretty simple.
 - If the file exists, it checks if the file is already present in the desired format
 - If the file is not in its desired format, it creates a new file which is the converted format of the original file
 - Error handling is done at each stage
+
+# To add:
+- Give pdf as input and convert to desired format
