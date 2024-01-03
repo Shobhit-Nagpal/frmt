@@ -6,6 +6,8 @@ Go was the first choice due to the ease of making CLI tools with the language.
 
 Pronounced as format.
 
+![Frmt working ss](./frmt.png)
+
 # Installation
 ## Clone repo
 ```shell
