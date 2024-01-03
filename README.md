@@ -38,6 +38,11 @@ frmt -p <FILE_PATH> -f <DESIRED_FORMAT>
 - File paths can be relative and/or absolute
 - Format flag is case insensitive
 
+- For information on flags, run
+``` shell
+frmt -h
+```
+
 # Supported output formats
 - PNG
 - JPG / JPEG
