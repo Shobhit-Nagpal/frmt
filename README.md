@@ -8,7 +8,7 @@ Go was the first choice due to the ease of making CLI tools with the language.
 To convert your file into another format, execute the following command:
 
 ```shell
-frmt -p=<FILE_PATH> -f=<DESIRED_FORMAT>
+frmt -p <FILE_PATH> -f <DESIRED_FORMAT>
 ```
 
 - Converted file is created in your present working directory (aka where you executed the command)
