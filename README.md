@@ -15,6 +15,9 @@ git clone git@github.com:Shobhit-Nagpal/frmt.git
 sudo mv frmt /bin/
 ```
 
+- Once the binary file has been moved to /bin directory, you can start using frmt as you'd like :)
+
+# Uninstallation
 To remove the binary from your bin directory:
 ```shell
 sudo rm /bin/frmt
