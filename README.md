@@ -9,22 +9,46 @@ Pronounced as format.
 ![Frmt working ss](https://shobhit-nagpal.github.io/portfolio/static/media/frmt.4a5dd7b2c1cff4087995.png)
 
 # Installation
-## Clone repo
+
+## 1. Install from Homebrew
+### Tap the repo
+``` shell
+brew tap Shobhit-Nagpal/frmt
+```
+### Install frmt
+```shell
+brew install frmt
+```
+- To check the directory where frmt is installed:
+```shell
+which frmt
+```
+## 2. Install manually
+### Clone repo
 ```shell
 git clone git@github.com:Shobhit-Nagpal/frmt.git
 ```
 
-## Move binary to /bin directory
+### Move binary to /bin directory
 ```shell
 sudo mv frmt /bin/
 ```
 
-- Once the binary file has been moved to /bin directory, you can start using frmt as you'd like :)
+- Once the binary file has been moved to /bin/ directory, you can start using frmt as you'd like :)
 
 # Uninstallation
+## 1. With Homebrew
+```shell
+brew uninstall frmt
+```
+## 2. Manually
 To remove the binary from your bin directory:
 ```shell
-sudo rm /bin/frmt
+which frmt
+```
+
+```shell
+sudo rm $(which frmt) 
 ```
 
 # Usage
